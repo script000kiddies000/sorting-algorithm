@@ -1,7 +1,3 @@
-import time
-
-data = [10, 2, 6, 7, 1, 3, 15] 
-
 def swap(a,b):
   swap = a
   a = b
@@ -9,6 +5,9 @@ def swap(a,b):
   return a,b
 
 def selection(A):
+  print("SELECTION SORT \n")
+  print("Array awal : %s" %A)
+
   for i in range(len(A)): 
       print("[%i] - %s" % (i,A))
 
@@ -19,10 +18,4 @@ def selection(A):
   
       A[i], A[min_idx] = swap( A[i], A[min_idx])
 
-print("SELECTION SORT \n")
-print("Array awal : %s" %data)
-start = time.time()
-selection(data)
-end = time.time()
-print("Array Akhir : %s\n" %data)
-print("Selesai dalam %f detik" % (end - start))
+  print("Array Akhir : %s\n" %A)
