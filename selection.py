@@ -1,4 +1,6 @@
-A = [75, 25,66.1,103,68,77,43,17,4, 102, 22, 11] 
+import time
+
+data = [10, 2, 6, 7, 1, 3, 15] 
 
 def swap(a,b):
   swap = a
@@ -6,21 +8,21 @@ def swap(a,b):
   b = swap
   return a,b
 
-print("array awal = ",A)
+def selection(A):
+  for i in range(len(A)): 
+      print("[%i] - %s" % (i,A))
 
-# Traverse through all array elements 
-for i in range(len(A)): 
-    print("iterasi ke ",i,A)
-    # Find the minimum element in remaining  
-    # unsorted array 
-    min_idx = i 
-    for j in range(i+1, len(A)): 
-        if A[min_idx] > A[j]: 
-            min_idx = j 
-              
-    # Swap the found minimum element with  
-    # the first element[i], A[min_idx]         
-    #A[i], A[min_idx] = A[min_idx], A[i] 
-    A[i], A[min_idx] = swap( A[i], A[min_idx])
+      min_idx = i 
+      for j in range(i+1, len(A)): 
+          if A[min_idx] > A[j]: 
+              min_idx = j 
+  
+      A[i], A[min_idx] = swap( A[i], A[min_idx])
 
-print("hasil = ",A)
+print("SELECTION SORT \n")
+print("Array awal : %s" %data)
+start = time.time()
+selection(data)
+end = time.time()
+print("Array Akhir : %s\n" %data)
+print("Selesai dalam %f detik" % (end - start))
