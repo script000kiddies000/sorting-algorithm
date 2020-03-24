@@ -10,13 +10,12 @@ while True:
 
   if jwb == '1' :
     start = time.time()
-    buble.bubbleSort(data)
+    bubble.bubbleSort(data)
     end = time.time()
     print(cekWaktu(start, end))
 
   elif jwb == '2' :
     start = time.time()
-    # buble.bubbleSort(data)
     selection.selection(data)
     end = time.time()
     print(cekWaktu(start, end))   
